@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hasil Pendaftaran OC</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📜 Daftar Karakter Terdaftar</h1>
+    {% for oc in data %}
+      <div style="background:#222; padding:1rem; margin:1rem 0; border-radius:8px;">
+        <h2>{{ oc['nama'] }}</h2>
+        <p><strong>Gamertag:</strong> {{ oc['gamertag'] }}</p>
+<p><strong>Ras:</strong> {{ oc['ras'] }}</p>
+        <p><strong>Class:</strong> {{ oc['class'] }}</p>
+        <p><strong>Job:</strong> {{ oc['job'] }}</p>
+        <p><strong>Role:</strong> {{ oc['role'] }}</p>
+        <p><strong>Sifat:</strong> {{ oc['sifat'] }}</p>
+        <p><strong>Lore:</strong> {{ oc['lore'] }}</p>
+        <p><strong>Tujuan:</strong> {{ oc['tujuan'] }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
