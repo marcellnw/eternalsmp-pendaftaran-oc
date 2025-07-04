@@ -552,84 +552,110 @@ body {
   </div>
 </div>
 
-<!-- Halaman Form -->
-<div class="container hidden" id="formPage">
-  <h2>Pendaftaran Karakter OC</h2>
-  <form id="ocForm">
-    <div class="form-columns">
-      <!-- Kiri -->
-      <div class="form-left">
-        <label for="gamertag">Nama Gamertag</label>
-        <input type="text" id="gamertag" name="gamertag" required>
+<!-- Halaman Home --><div class="container active" id="homePage">
+  <div class="home-content">
+    <img src="https://raw.githubusercontent.com/marcellnw/Gambar/main/20250702_183405.png"
+         class="logo-img"
+         alt="Eternal SMP Logo" /><div class="home-text">
+  <h1 style="font-family: 'Cinzel', serif; color: #ffd700; font-size: 28px; margin-top: 0;">The Great Fearssade</h1>
+  <p>
+    Selamat datang di <strong>Eternal SMP Season 14</strong>, dunia fantasi tempat kisah dan karakter ciptaanmu akan hidup dan berkembang!  
+    Daftarkan karaktermu sekarang dan jadilah bagian dari petualangan epik yang tak terlupakan.
+  </p>
+  <div style="margin-top: 20px;">
+    <button class="btn" onclick="playClick(); openForm()">Daftar Sekarang</button>
+  </div>
+</div>
 
-        <label for="ocname">Nama Karakter OC *</label>
-        <input type="text" id="ocname" name="ocname" required>
+  </div>
+</div><!-- Halaman Form --><div class="container hidden" id="formPage">
+  <h2 class="judul-form">Pendaftaran Karakter OC</h2>
+  <form class="form-grid">
+    <div class="form-group">
+      <label for="gamertag">Nama Gamertag</label>
+      <input type="text" id="gamertag" name="gamertag" required>
+    </div><div class="form-group">
+  <label for="ocname">Nama Karakter OC *</label>
+  <input type="text" id="ocname" name="ocname" required>
+</div>
 
-        <label for="race">Ras</label>
-        <select id="race" name="race" required>
-          <option value="">-- Pilih --</option>
-          <option value="Euria">Euria - Peri cahaya, penjaga alam</option>
-          <option value="Graveth">Graveth - Ras kuat ahli sihir gelap</option>
-          <option value="Maredien">Maredien - Bangsawan diplomatis</option>
-          <option value="Heretic">Heretic - Pemilik sihir terlarang</option>
-          <option value="Diablonic">Diablonic - Iblis haus kuasa</option>
-          <option value="Laurian">Laurian - Pemburu & pelindung hutan</option>
-        </select>
+<div class="form-group">
+  <label for="race">Ras</label>
+  <select id="race" name="race" required>
+    <option value="">-- Pilih --</option>
+    <option value="Euria">Euria - Peri cahaya, penjaga alam</option>
+    <option value="Graveth">Graveth - Ras kuat ahli sihir gelap</option>
+    <option value="Maredien">Maredien - Bangsawan diplomatis</option>
+    <option value="Heretic">Heretic - Pemilik sihir terlarang</option>
+    <option value="Diablonic">Diablonic - Iblis haus kuasa</option>
+    <option value="Laurian">Laurian - Pemburu & pelindung hutan</option>
+  </select>
+</div>
 
-        <label for="class">Class</label>
-        <select id="class" name="class" required>
-          <option value="">-- Pilih --</option>
-          <option>Warrior - Petarung seimbang</option>
-          <option>Berserker - Liar & brutal</option>
-          <option>Tank - Pertahanan tinggi</option>
-          <option>Lancer - Cepat & menusuk</option>
-          <option>Rogue - Licik & lincah</option>
-          <option>Hunter - Jarak jauh</option>
-          <option>Ronin - Pendekar bebas</option>
-          <option>Swordmage - Pedang & sihir</option>
-          <option>Priest - Penyembuh</option>
-        </select>
-      </div>
+<div class="form-group">
+  <label for="class">Class</label>
+  <select id="class" name="class" required>
+    <option value="">-- Pilih --</option>
+    <option>Warrior - Petarung seimbang</option>
+    <option>Berserker - Liar & brutal</option>
+    <option>Tank - Pertahanan tinggi</option>
+    <option>Lancer - Cepat & menusuk</option>
+    <option>Rogue - Licik & lincah</option>
+    <option>Hunter - Jarak jauh</option>
+    <option>Ronin - Pendekar bebas</option>
+    <option>Swordmage - Pedang & sihir</option>
+    <option>Priest - Penyembuh</option>
+  </select>
+</div>
 
-      <!-- Kanan -->
-      <div class="form-right">
-        <label for="job">Job</label>
-        <select id="job" name="job" required>
-          <option value="">-- Pilih --</option>
-          <option>Alchemist - Pembuat ramuan</option>
-          <option>Blacksmith - Pandai besi</option>
-          <option>Trader - Ahli jual beli</option>
-          <option>Farmer - Petani</option>
-          <option>Nitwit - Awal tanpa keahlian</option>
-        </select>
+<div class="form-group">
+  <label for="job">Job</label>
+  <select id="job" name="job" required>
+    <option value="">-- Pilih --</option>
+    <option>Alchemist - Pembuat ramuan</option>
+    <option>Blacksmith - Pandai besi</option>
+    <option>Trader - Ahli jual beli</option>
+    <option>Farmer - Petani</option>
+    <option>Nitwit - Awal tanpa keahlian</option>
+  </select>
+</div>
 
-        <label for="role">Role Sosial</label>
-        <select id="role" name="role" required>
-          <option value="">-- Pilih --</option>
-          <option>Raja - Pemimpin utama</option>
-          <option>Bangsawan - Tokoh berpengaruh</option>
-          <option>Royalis - Pendukung kerajaan</option>
-          <option>Worker - Rakyat biasa</option>
-        </select>
+<div class="form-group">
+  <label for="role">Role Sosial</label>
+  <select id="role" name="role" required>
+    <option value="">-- Pilih --</option>
+    <option>Raja - Pemimpin utama</option>
+    <option>Bangsawan - Tokoh berpengaruh</option>
+    <option>Royalis - Pendukung kerajaan</option>
+    <option>Worker - Rakyat biasa</option>
+  </select>
+</div>
 
-        <label for="image">Upload Gambar Karakter</label>
-        <input type="file" id="image" name="image" accept="image/*" />
+<div class="form-group">
+  <label for="image">Upload Gambar Karakter</label>
+  <input type="file" id="image" name="image" accept="image/*" />
+</div>
 
-        <label for="sifat">Sifat & Kepribadian</label>
-        <textarea id="sifat" name="sifat" minlength="50" required></textarea>
-      </div>
-    </div>
+<div class="form-group">
+  <label for="sifat">Sifat & Kepribadian</label>
+  <textarea id="sifat" name="sifat" minlength="50" required></textarea>
+</div>
 
-    <label for="lore">Lore & Background</label>
-    <textarea id="lore" name="lore" minlength="100" required></textarea>
+<div class="form-group">
+  <label for="lore">Lore & Background</label>
+  <textarea id="lore" name="lore" minlength="100" required></textarea>
+</div>
 
-    <label for="tujuan">Tujuan & Motivasi</label>
-    <textarea id="tujuan" name="tujuan" minlength="50" required></textarea>
+<div class="form-group">
+  <label for="tujuan">Tujuan & Motivasi</label>
+  <textarea id="tujuan" name="tujuan" minlength="50" required></textarea>
+</div>
 
-    <div style="text-align:center">
-      <button type="button" class="btn" onclick="playClick(); showPreview()">Preview</button>
-      <button type="button" class="btn" onclick="playClick2(); backToHome()">Kembali</button>
-    </div>
+<div class="form-actions">
+  <button type="button" class="btn" onclick="playClick(); showPreview()">Preview</button>
+  <button type="button" class="btn" onclick="playClick2(); backToHome()">Kembali</button>
+</div>
+
   </form>
 </div>
 
