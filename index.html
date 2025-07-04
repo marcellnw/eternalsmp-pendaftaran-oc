@@ -552,32 +552,132 @@ body {
   </div>
 </div>
 
-<!-- Halaman Home --><div class="container active" id="homePage">
-  <div class="home-content">
-    <img src="https://raw.githubusercontent.com/marcellnw/Gambar/main/20250702_183405.png"
-         class="logo-img"
-         alt="Eternal SMP Logo" /><div class="home-text">
-  <h1 style="font-family: 'Cinzel', serif; color: #ffd700; font-size: 28px; margin-top: 0;">The Great Fearssade</h1>
-  <p>
-    Selamat datang di <strong>Eternal SMP Season 14</strong>, dunia fantasi tempat kisah dan karakter ciptaanmu akan hidup dan berkembang!  
-    Daftarkan karaktermu sekarang dan jadilah bagian dari petualangan epik yang tak terlupakan.
-  </p>
-  <div style="margin-top: 20px;">
-    <button class="btn" onclick="playClick(); openForm()">Daftar Sekarang</button>
+  <!-- Halaman Home -->
+  <div class="container active" id="homePage">
+    <div class="home-content">
+      <img src="https://raw.githubusercontent.com/marcellnw/Gambar/main/20250702_183405.png" class="logo-img" alt="Eternal SMP Logo" />
+      <div class="home-text">
+        <h1 style="font-family: 'Cinzel', serif; color: #ffd700; font-size: 28px; margin-top: 0;">The Great Fearssade</h1>
+        <p>
+          Selamat datang di <strong>Eternal SMP Season 14</strong>, dunia fantasi tempat kisah dan karakter ciptaanmu akan hidup dan berkembang!
+          Daftarkan karaktermu sekarang dan jadilah bagian dari petualangan epik yang tak terlupakan.
+        </p>
+        <div style="margin-top: 20px;">
+          <button class="btn" onclick="playClick(); openForm()">Daftar Sekarang</button>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Halaman Form -->
+  <div class="container hidden" id="formPage">
+    <h2>Pendaftaran Karakter OC</h2>
+    <form id="ocForm">
+      <div class="form-columns">
+        <!-- Kiri -->
+        <div class="form-left">
+          <label for="gamertag">Nama Gamertag</label>
+          <input type="text" id="gamertag" name="gamertag" required>
+
+          <label for="ocname">Nama Karakter OC *</label>
+          <input type="text" id="ocname" name="ocname" required>
+
+          <label for="race">Ras</label>
+          <select id="race" name="race" required>
+            <option value="">-- Pilih --</option>
+            <option value="Euria">Euria - 🌿 Peri cahaya, penjaga alam</option>
+            <option value="Graveth">Graveth - 💀 Ras kuat, ahli sihir gelap</option>
+            <option value="Maredien">Maredien - 👑 Bangsawan diplomatis</option>
+            <option value="Heretic">Heretic - 🔯 Pemilik sihir terlarang</option>
+            <option value="Diablonic">Diablonic - 🔥 Iblis haus kekuasaan</option>
+            <option value="Laurian">Laurian - 🦌 Pemburu & pelindung hutan</option>
+          </select>
+
+          <label for="class">Class</label>
+          <select id="class" name="class" required>
+            <option value="">-- Pilih --</option>
+            <option>⚔️ Warrior - Petarung seimbang</option>
+            <option>💫 Berserker - Liar & brutal</option>
+            <option>🛡️ Tank - Pertahanan tinggi</option>
+            <option>🌽 Lancer - Cepat & menusuk</option>
+            <option>🔪 Rogue - Licik & lincah</option>
+            <option>🎯 Hunter - Serangan jarak jauh</option>
+            <option>🥷 Ronin - Pendekar bebas</option>
+            <option>🔀 Swordmage - Pedang & sihir</option>
+            <option>✨ Priest - Penyembuh & pendukung</option>
+          </select>
+        </div>
+
+        <!-- Kanan -->
+        <div class="form-right">
+          <label for="job">Job</label>
+          <select id="job" name="job" required>
+            <option value="">-- Pilih --</option>
+            <option>🧪 Alchemist - Pembuat ramuan ajaib</option>
+            <option>⚒️ Blacksmith - Pandai besi & senjata</option>
+            <option>💰 Trader - Ahli dagang & ekonomi</option>
+            <option>🌾 Farmer - Petani & pengelola sumber</option>
+            <option>❓ Nitwit - Awal tanpa keahlian khusus</option>
+          </select>
+
+          <label for="role">Role Sosial</label>
+          <select id="role" name="role" required>
+            <option value="">-- Pilih --</option>
+            <option>👑 Raja - Pemimpin kerajaan</option>
+            <option>🏰 Bangsawan - Tokoh berpengaruh</option>
+            <option>📜 Royalis - Pendukung kerajaan</option>
+            <option>🧑‍🌾 Worker - Warga biasa</option>
+          </select>
+
+          <label for="image">Upload Gambar Karakter</label>
+          <input type="file" id="image" name="image" accept="image/*" />
+
+          <label for="sifat">Sifat & Kepribadian</label>
+          <textarea id="sifat" name="sifat" minlength="50" required></textarea>
+        </div>
+      </div>
+
+      <label for="lore">Lore & Background</label>
+      <textarea id="lore" name="lore" minlength="100" required></textarea>
+
+      <label for="tujuan">Tujuan & Motivasi</label>
+      <textarea id="tujuan" name="tujuan" minlength="50" required></textarea>
+
+      <div style="text-align:center">
+        <button type="button" class="btn" onclick="playClick(); showPreview()">Preview</button>
+        <button type="button" class="btn" onclick="playClick2(); backToHome()">Kembali</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Halaman Statistik (dipanggil dari JavaScript) -->
+  <div class="container hidden" id="statsPage">
+    <h2 style="font-family: 'Cinzel', serif; color: #ffd700; font-size: 28px; text-align:center;">
+      Statistik Pendaftaran
+    </h2>
+
+    <div id="statsSummary" style="text-align:center; font-size:18px; margin-bottom:24px;">
+      <!-- Diisi via JavaScript -->
+    </div>
+
+    <div id="statsContent" style="font-size:15px; color:#fff; background:#000; padding:20px; border-radius:12px; border:1px solid #ffd700; max-height:400px; overflow-y:auto;">
+      <!-- Data list pendaftar akan tampil di sini -->
+    </div>
+
+    <div style="text-align:center; margin-top:32px;">
+      <button class="btn" onclick="playClick2(); backToHome()">Kembali ke Halaman Utama</button>
+    </div>
+  </div>
+
+  </form>
 </div>
 
-  </div>
-</div><!-- Halaman Form --><div class="container hidden" id="formPage">
-  <h2 class="judul-form">Pendaftaran Karakter OC</h2>
-  <form class="form-grid">
-    <div class="form-group">
-      <label for="gamertag">Nama Gamertag</label>
-      <input type="text" id="gamertag" name="gamertag" required>
-    </div><div class="form-group">
-  <label for="ocname">Nama Karakter OC *</label>
-  <input type="text" id="ocname" name="ocname" required>
-</div>
+  <!-- Preview Page -->
+<div class="container hidden" id="previewPage">
+  <h2>Preview Karakter OC</h2>
+  <pre id="previewContent"></pre>
+  <div style="text-align:center">
+
 
 <div class="form-group">
   <label for="race">Ras</label>
